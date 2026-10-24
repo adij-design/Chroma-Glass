@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Chroma-Glass/',
+  // GitHub Pages serves this as a project site; Vercel serves from the domain root.
+  base: process.env.VERCEL ? '/' : '/Chroma-Glass/',
   plugins: [react()],
 })
